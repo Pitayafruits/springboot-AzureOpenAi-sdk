@@ -57,7 +57,6 @@ public class ChatController {
     //3.创建一个新的ChatMessage对象，表示用户的消息
     ChatMessage userMessage = new ChatMessage(ChatMessage.Role.USER,userContent);
     //4.从chatHistories中获取与该用户ID关联的对话历史
-    //List<ChatMessage> chatHistory = chatHistories.get(userId);
     List<ChatMessage> chatHistory = chatHistoryService.getHistory(userId);
     //5.如果对话历史不存在，则创建一个新的对话历史并且把当前对话内容加进去
     if (chatHistory.size() == 0) {
