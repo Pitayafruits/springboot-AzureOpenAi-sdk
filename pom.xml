@@ -11,9 +11,9 @@
     </parent>
 
     <groupId>com.pitayafruits</groupId>
-    <artifactId>springboot-azureopenai-sdk</artifactId>
+    <artifactId>springboot-AzureOpenAi-sdk</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-azureopenai-sdk</name>
+    <name>springboot-AzureOpenAi-sdk</name>
     <properties>
         <java.version>17</java.version>
     </properties>
