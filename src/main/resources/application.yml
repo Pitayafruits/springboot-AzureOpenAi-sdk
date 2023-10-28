@@ -1,0 +1,57 @@
+# 端口号
+server:
+  port: 8000
+
+# 微软AI服务
+azure:
+  apiKey: "填写自己的"
+  deployment: "填写自己的"
+  endpoint: "填写自己的"
+  apiVersion: "填写自己的"
+
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://填写自己的:3306/ai?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+    username: 填写自己的
+    password: 填写自己的
+    druid:
+      # 连接池启动时创建的初始化连接数量
+      initial-size: 5
+      # 连接池中最小的空闲连接数
+      min-idle: 15
+      # 连接池中最大的活跃连接数
+      max-active: 30
+      # 超时时间(以秒数为单位)
+      remove-abandoned-timeout: 180
+      # 获取连接时最大等待时间，单位是毫秒
+      max-wait: 3000
+      # 检测需要关闭的空闲连接间隔时间，单位是毫秒
+      time-between-eviction-runs-millis: 60000
+      # 连接在池中保持空闲而不被驱逐的最小时间，单位是毫秒
+      min-evictable-idle-time-millis: 300000
+      # 连接在池中最大生存的时间
+      max-evictable-idle-time-millis: 900000
+      # 是否在空闲时检测连接的有效性
+      test-while-idle: true
+      # 是否在获取连接时检测连接的有效性
+      test-on-borrow: false
+      # 用来检测连接是否有效的SQL语句
+      validation-query: SELECT 1 FROM DUAL
+      # 是否在归还连接时检测连接的有效性
+      test-on-return: false
+  data:
+    redis:
+      database: 0
+      host: 填写自己的
+      port: 6379
+      password:
+      jedis:
+        pool:
+          max-active: 8  # 连接池最大连接数（使用负值表示没有限制），默认为8
+          max-wait: -1  # 连接池最大阻塞等待时间（使用负值表示没有限制），默认为-1
+          max-idle: 10  # 连接池中的最大空闲连接，默认为10
+          min-idle: 2  # 连接池中的最小空闲连接，默认为2
+      timeout: 5000 # 超时时间
