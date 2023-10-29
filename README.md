@@ -3,3 +3,10 @@
 的编写。
 # 项目原理
 ![原理](https://raw.githubusercontent.com/Pitayafruits/myPicRep/main/image/202310292144679.png)
+# 项目配置
+**本项目有三个需要配置的点：** </br>
+- application.yml -> Azure Key、MySQL、Redis
+- ChatConstant.java -> 添加自己需求的预置语料
+- ChatHistoryService.java -> 根据自己添加预置语料的数量，修改index的值
+# 关于项目
+项目目前算是一个sdk的简单封装，可能还有许多需要完善的地方，如果你有好的想法和建议，欢迎提Issues！
